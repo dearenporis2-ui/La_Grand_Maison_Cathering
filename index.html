@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Grande Maison — Catering &amp; Private Chef | Seychelles</title>
+<meta name="description" content="Private dining, weddings and corporate catering by Chef Christelle Verheyden. Bespoke menus crafted with the finest Seychelles ingredients.">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   LA GRANDE MAISON — Catering & Private Chef
+   ============================================ */
+
+:root {
+  --obsidian: #F2E9D8;
+  --panel: #E8DBBB;
+  --panel-2: #FBF7EC;
+  --teal: #1E6B64;
+  --teal-light: #2F8A81;
+  --rust: #B8502E;
+  --rust-light: #9C4527;
+  --rust-bright: #E08A5B;
+  --maroon: #6E2320;
+  --cream: #2A2118;
+  --cream-dim: #6B5D4D;
+  --on-accent: #F5EFE2;
+  --line: rgba(42, 33, 24, 0.14);
+
+  --display: 'Cormorant Garamond', serif;
+  --body: 'Inter', sans-serif;
+
+  --container: 1180px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.page { display: none; }
+.page.active { display: block; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+
+body {
+  background: var(--obsidian);
+  color: var(--cream);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+}
+
+/* ---------- Typography ---------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--cream);
+}
+
+.eyebrow {
+  font-family: var(--body);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rust-light);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.section-lede {
+  font-size: 17px;
+  color: var(--cream-dim);
+  max-width: 620px;
+  line-height: 1.75;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  font-family: var(--body);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--on-accent);
+  border-color: var(--teal);
+}
+.btn-primary:hover { background: var(--teal-light); border-color: var(--teal-light); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--line);
+}
+.btn-outline:hover { border-color: var(--rust-light); color: var(--rust-light); }
+
+.btn-rust {
+  background: var(--rust);
+  color: var(--on-accent);
+  border-color: var(--rust);
+}
+.btn-rust:hover { background: var(--rust-light); border-color: var(--rust-light); }
+
+/* ---------- Nav ---------- */
+
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 22px 0;
+  transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.scrolled {
+  background: rgba(242, 233, 216, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 14px 0;
+  border-bottom-color: var(--line);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img { height: 42px; width: auto; }
+
+.brand-text {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--cream);
+  line-height: 1.1;
+}
+.brand-text small {
+  display: block;
+  font-family: var(--body);
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rust-light);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  color: var(--cream-dim);
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--cream); }
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--rust-light);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    width: 260px;
+    background: var(--panel);
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-left: 1px solid var(--line);
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-toggle { display: block; }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rust-bright);
+  margin-bottom: 22px;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+}
+
+.hero h1 {
+  font-size: clamp(44px, 8vw, 96px);
+  font-style: italic;
+  line-height: 1.02;
+  margin-bottom: 22px;
+  color: var(--on-accent);
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: rgba(245, 239, 226, 0.92);
+  max-width: 560px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(var(--rust-bright), transparent);
+}
+
+/* ---------- Plate media (signature element) ---------- */
+
+.plate {
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(42,33,24,0.14);
+  box-shadow: 0 0 0 6px var(--obsidian), 0 0 0 7px rgba(42,33,24,0.10);
+}
+button.plate {
+  appearance: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.plate img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.plate.ring-teal { box-shadow: 0 0 0 6px var(--obsidian), 0 0 0 7px var(--teal); }
+.plate.ring-rust { box-shadow: 0 0 0 6px var(--obsidian), 0 0 0 7px var(--rust); }
+
+/* ---------- Pillars (Home) ---------- */
+
+.pillars {
+  padding: 120px 0;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 70px;
+}
+
+@media (max-width: 860px) {
+  .pillars-grid { grid-template-columns: 1fr; gap: 60px; }
+}
+
+.pillar-card {
+  text-align: center;
+}
+
+.pillar-card .plate {
+  width: 200px;
+  margin: 0 auto 28px;
+  transition: transform 0.4s ease;
+}
+.pillar-card:hover .plate { transform: scale(1.04); }
+
+.pillar-card h3 {
+  font-size: 26px;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.pillar-card p {
+  color: var(--cream-dim);
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.pillar-card a.link {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rust-light);
+  border-bottom: 1px solid var(--rust-light);
+  padding-bottom: 3px;
+}
+
+/* ---------- Gallery strip ---------- */
+
+.gallery-band {
+  padding: 90px 0;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.gallery-band-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 6px 6px 26px;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 32px, #000 calc(100% - 32px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 32px, #000 calc(100% - 32px), transparent 100%);
+}
+.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-track.dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.gallery-viewport {
+  position: relative;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 190px;
+}
+.gallery-item .plate { margin-bottom: 0; }
+
+/* ---------- About teaser / quote ---------- */
+
+.quote-section {
+  padding: 130px 0;
+  text-align: center;
+}
+.quote-mark {
+  font-family: var(--display);
+  font-size: 90px;
+  color: var(--rust);
+  opacity: 0.5;
+  line-height: 1;
+}
+.quote-section blockquote {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(24px, 3.4vw, 38px);
+  max-width: 780px;
+  margin: 0 auto 24px;
+  line-height: 1.5;
+}
+.quote-cite {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+/* ---------- Generic content sections ---------- */
+
+.section {
+  padding: 110px 0;
+}
+.section-alt {
+  background: var(--panel);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .two-col { grid-template-columns: 1fr; gap: 44px; }
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: 30px;
+}
+.feature-list li {
+  display: flex;
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  color: var(--cream-dim);
+}
+.feature-list li:last-child { border-bottom: 1px solid var(--line); }
+.feature-list li .mark {
+  color: var(--rust-light);
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.feature-list li strong { color: var(--cream); font-weight: 600; }
+
+.image-frame {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+/* ---------- Forms ---------- */
+
+.form-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 50px;
+}
+@media (max-width: 640px) { .form-wrap { padding: 32px 22px; } }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+@media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+
+.field { margin-bottom: 22px; }
+.field label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 8px;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  background: var(--obsidian);
+  border: 1px solid var(--line);
+  color: var(--cream);
+  padding: 13px 15px;
+  font-family: var(--body);
+  font-size: 14.5px;
+  border-radius: 3px;
+  transition: border-color 0.2s ease;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+.field textarea { resize: vertical; min-height: 110px; }
+
+.form-note {
+  font-size: 13px;
+  color: var(--cream-dim);
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+.form-success.show { display: block; }
+.form-success h3 { font-style: italic; font-size: 28px; margin-bottom: 12px; }
+.form-success p { color: var(--cream-dim); max-width: 460px; margin: 0 auto; }
+
+.form-success-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 26px 0 22px;
+}
+.form-success-message {
+  display: none;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--obsidian);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 18px 20px;
+  font-family: var(--body);
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--cream);
+  max-width: 480px;
+  margin: 0 auto;
+}
+.form-success-message.show { display: block; }
+.copy-message-btn.copied {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 80px 0 40px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+@media (max-width: 720px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+.footer-brand .brand { margin-bottom: 16px; }
+.footer-brand p {
+  color: var(--cream-dim);
+  font-size: 14px;
+  max-width: 320px;
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--body);
+  color: var(--cream);
+  margin-bottom: 18px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; }
+.footer-col a {
+  color: var(--cream-dim);
+  font-size: 14.5px;
+  transition: color 0.2s ease;
+}
+.footer-col a:hover { color: var(--rust-light); }
+
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12.5px;
+  color: var(--cream-dim);
+}
+
+/* ---------- Page hero (interior pages) ---------- */
+
+.page-hero {
+  position: relative;
+  padding: 200px 0 100px;
+  text-align: center;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(30,107,100,0.18), transparent 60%);
+  z-index: 0;
+}
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero h1 {
+  font-size: clamp(40px, 6vw, 70px);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.page-hero p {
+  color: var(--cream-dim);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16.5px;
+  line-height: 1.75;
+}
+
+/* Image-background variant */
+.page-hero-image {
+  background-size: cover;
+  background-position: center;
+  background-color: var(--panel);
+}
+.page-hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(14,12,10,0.4) 0%, rgba(14,12,10,0.5) 45%, rgba(14,12,10,0.8) 100%),
+    linear-gradient(90deg, rgba(14,12,10,0.32) 0%, rgba(14,12,10,0.05) 55%, rgba(14,12,10,0.32) 100%);
+  z-index: 0;
+}
+.page-hero-image .eyebrow {
+  color: var(--rust-bright);
+  text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+}
+.page-hero-image h1 {
+  color: var(--on-accent);
+  text-shadow: 0 4px 22px rgba(0,0,0,0.5);
+}
+.page-hero-image p {
+  color: rgba(245, 239, 226, 0.88);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+.page-hero-image.bg-loading {
+  background-image: none !important;
+  background: linear-gradient(90deg, var(--panel) 0%, var(--panel-2) 50%, var(--panel) 100%);
+  background-size: 800px 100%;
+  animation: shimmer 1.3s infinite linear;
+}
+
+/* ============================================================
+   EDITORIAL HERO SYSTEM
+   Distinct cinematic/editorial hero per interior page
+   ============================================================ */
+
+.ehero-eyebrow {
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.ehero-heading {
+  font-family: var(--display);
+  font-weight: 500;
+  line-height: 1.08;
+  font-size: clamp(38px, 5.2vw, 68px);
+}
+.ehero-heading em {
+  font-style: italic;
+  font-weight: 400;
+}
+.ehero-rule {
+  width: 54px;
+  height: 1px;
+  margin: 26px 0;
+}
+.ehero-sub {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 440px;
+}
+.ehero-cta,
+.ehero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.ehero-cta {
+  border: 1px solid rgba(245, 239, 226, 0.4);
+  padding: 16px 26px;
+  color: var(--on-accent);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.ehero-cta:hover {
+  border-color: var(--rust-bright);
+  background: rgba(245, 239, 226, 0.06);
+}
+.ehero-cta .arrow, .ehero-link .arrow {
+  transition: transform 0.3s ease;
+}
+.ehero-cta:hover .arrow, .ehero-link:hover .arrow {
+  transform: translateX(5px);
+}
+.ehero-link {
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ehero-cta .arrow, .ehero-link .arrow { transition: none; }
+}
+
+/* ---- Slow photographic zoom, shared by all photo heroes ---- */
+@keyframes eheroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.09); }
+}
+.ehero-ken-burns {
+  animation: eheroZoom 24s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ehero-ken-burns { animation: none; }
+}
+
+/* ---- 1. PRIVATE DINING — cinematic, asymmetric, gradient bleed left ---- */
+.ehero-pd {
+  position: relative;
+  min-height: 94vh;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--obsidian);
+}
+.ehero-pd-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.ehero-pd-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.ehero-pd-media img.loaded { opacity: 1; }
+.ehero-pd-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(12,10,8,0.95) 0%, rgba(12,10,8,0.82) 26%, rgba(12,10,8,0.42) 52%, rgba(12,10,8,0.08) 76%),
+    linear-gradient(0deg, rgba(12,10,8,0.65) 0%, rgba(12,10,8,0) 26%);
+}
+.ehero-pd-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 94vh;
+  padding-top: 150px;
+  padding-bottom: 56px;
+  padding-left: clamp(24px, 6vw, 96px);
+  padding-right: clamp(24px, 6vw, 96px);
+}
+.ehero-pd-col {
+  max-width: 610px;
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+.ehero-pd .ehero-eyebrow { color: var(--rust-bright); }
+.ehero-pd .ehero-heading { color: var(--on-accent); }
+.ehero-pd .ehero-rule { background: var(--rust-bright); }
+.ehero-pd .ehero-sub { color: rgba(245, 239, 226, 0.82); margin-bottom: 34px; }
+.ehero-pd-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(245, 239, 226, 0.7);
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.ehero-pd-tag { display: flex; align-items: center; gap: 12px; }
+.ehero-pd-tag::before {
+  content: '';
+  width: 1px;
+  height: 16px;
+  background: rgba(245, 239, 226, 0.4);
+}
+.ehero-pd-index { font-family: var(--display); font-style: italic; letter-spacing: 0.06em; }
+
+@media (max-width: 860px) {
+  .ehero-pd-content { padding-top: 130px; padding-bottom: 40px; }
+  .ehero-pd-col { margin-bottom: 44px; }
+  .ehero-pd-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
+
+/* ---- 2. WEDDINGS — romantic split, panel + photo ---- */
+.ehero-wd {
+  position: relative;
+  display: flex;
+  min-height: 94vh;
+  background: var(--obsidian);
+  overflow: hidden;
+}
+.ehero-wd-panel {
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 64px 60px clamp(32px, 6vw, 96px);
+  position: relative;
+  z-index: 2;
+}
+.ehero-wd-media {
+  width: 56%;
+  position: relative;
+  overflow: hidden;
+}
+.ehero-wd-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.ehero-wd-media img.loaded { opacity: 1; }
+.ehero-wd-media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(12,10,8,0.5) 0%, transparent 16%),
+    linear-gradient(180deg, rgba(12,10,8,0.5) 0%, transparent 16%),
+    linear-gradient(0deg, rgba(12,10,8,0.35), transparent 40%);
+  z-index: 1;
+}
+.ehero-wd-seam {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 44%;
+  width: 100px;
+  z-index: 1;
+  background: linear-gradient(90deg, var(--obsidian) 0%, rgba(242,233,216,0) 100%);
+  pointer-events: none;
+}
+.ehero-wd .ehero-eyebrow { color: var(--rust-light); }
+.ehero-wd .ehero-heading { color: var(--cream); }
+.ehero-wd .ehero-rule { background: var(--rust); }
+.ehero-wd .ehero-sub { color: var(--cream-dim); margin-bottom: 32px; }
+.ehero-wd .ehero-link { color: var(--rust-light); }
+
+@media (max-width: 900px) {
+  .ehero-wd { flex-direction: column; min-height: auto; }
+  .ehero-wd-panel { width: 100%; padding: 48px 24px 48px; order: 2; }
+  .ehero-wd-media { width: 100%; height: 52vh; order: 1; }
+  .ehero-wd-seam { display: none; }
+}
+
+/* ---- 3. CORPORATE — structured, architectural split ---- */
+.ehero-corp {
+  position: relative;
+  display: flex;
+  min-height: 88vh;
+  background: var(--panel-2);
+  overflow: hidden;
+}
+.ehero-corp-media {
+  width: 54%;
+  position: relative;
+  overflow: hidden;
+}
+.ehero-corp-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.ehero-corp-media img.loaded { opacity: 1; }
+.ehero-corp-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(12,10,8,0.4), transparent 45%),
+    linear-gradient(180deg, rgba(12,10,8,0.4) 0%, transparent 18%);
+}
+.ehero-corp-panel {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px clamp(32px, 5vw, 80px) 60px;
+  border-left: 1px solid var(--line);
+  position: relative;
+}
+.ehero-corp-index {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 34px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.ehero-corp .ehero-eyebrow { color: var(--teal); }
+.ehero-corp .ehero-heading { color: var(--cream); font-style: normal; }
+.ehero-corp .ehero-rule { background: var(--teal); }
+.ehero-corp .ehero-sub { color: var(--cream-dim); margin-bottom: 34px; }
+.ehero-corp .ehero-cta {
+  border-color: var(--line);
+  color: var(--cream);
+}
+.ehero-corp .ehero-cta:hover {
+  border-color: var(--teal);
+  background: rgba(30,107,100,0.06);
+}
+
+@media (max-width: 900px) {
+  .ehero-corp { flex-direction: column; min-height: auto; }
+  .ehero-corp-media { width: 100%; height: 46vh; }
+  .ehero-corp-panel { width: 100%; padding: 48px 24px 56px; border-left: none; border-top: 1px solid var(--line); }
+}
+
+/* ---- 4. ABOUT — editorial magazine spread, light, two photos ---- */
+.ehero-about {
+  background: var(--panel-2);
+  padding: 168px 0 100px;
+}
+.ehero-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.ehero-about-text .ehero-eyebrow { color: var(--rust-light); }
+.ehero-about-heading {
+  font-family: var(--display);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.12;
+  font-size: clamp(34px, 4.2vw, 54px);
+  color: var(--cream);
+  margin-bottom: 26px;
+}
+.ehero-about-lede {
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: var(--cream-dim);
+  max-width: 460px;
+}
+.ehero-about-media {
+  position: relative;
+  height: 480px;
+}
+.ehero-about-photo-main {
+  position: absolute;
+  top: 0; right: 0;
+  width: 80%;
+  height: 84%;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(42,33,24,0.18);
+}
+.ehero-about-photo-accent {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 46%;
+  height: 46%;
+  overflow: hidden;
+  border: 6px solid var(--panel-2);
+  box-shadow: 0 20px 40px rgba(42,33,24,0.22);
+}
+.ehero-about-photo-main img,
+.ehero-about-photo-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.ehero-about-photo-main img.loaded,
+.ehero-about-photo-accent img.loaded { opacity: 1; }
+
+@media (max-width: 900px) {
+  .ehero-about { padding: 140px 0 64px; }
+  .ehero-about-grid { grid-template-columns: 1fr; gap: 50px; }
+  .ehero-about-media { height: 380px; order: -1; }
+}
+
+/* ---- 5. CONTACT — minimal, light, centered ---- */
+.ehero-contact {
+  background: var(--panel-2);
+  padding: 190px 0 110px;
+  text-align: center;
+}
+.ehero-contact-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.ehero-contact .ehero-eyebrow {
+  color: var(--rust-light);
+  display: block;
+}
+.ehero-contact-heading {
+  font-family: var(--display);
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: clamp(36px, 5vw, 58px);
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+.ehero-contact-heading em { font-style: italic; font-weight: 400; }
+.ehero-sub-light {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: var(--cream-dim);
+  max-width: 480px;
+  margin: 0 auto 30px;
+}
+.ehero-contact-tags {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rust-light);
+}
+
+@media (max-width: 640px) {
+  .ehero-contact { padding: 150px 0 70px; }
+}
+
+/* ---------- Menu-style list (service pages) ---------- */
+
+.menu-block {
+  border-top: 1px solid var(--line);
+  padding: 36px 0;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+}
+@media (max-width: 720px) {
+  .menu-block { grid-template-columns: 1fr; gap: 16px; }
+}
+.menu-block:last-child { border-bottom: 1px solid var(--line); }
+.menu-block h3 {
+  font-size: 24px;
+  font-style: italic;
+}
+.menu-block p {
+  color: var(--cream-dim);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ---------- Splash / loading screen ---------- */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--obsidian);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.splash.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.splash-logo {
+  width: 130px;
+  margin-bottom: 30px;
+  animation: splashPulse 1.6s ease-in-out infinite;
+}
+@keyframes splashPulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1); }
+}
+.splash-bar {
+  width: 160px;
+  height: 2px;
+  background: rgba(42, 33, 24, 0.14);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.splash-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--teal), var(--rust));
+  animation: splashFill 1.4s ease forwards;
+}
+@keyframes splashFill {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .splash-logo { animation: none; opacity: 1; transform: none; }
+  .splash-bar-fill { animation: none; width: 100%; }
+}
+
+/* ---------- Load-in entrance animations ---------- */
+
+@keyframes fadeUpIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow,
+.hero h1,
+.hero-sub,
+.hero-ctas {
+  animation: fadeUpIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-eyebrow { animation-delay: 0.22s; }
+.hero h1 { animation-delay: 0.36s; }
+.hero-sub { animation-delay: 0.52s; }
+.hero-ctas { animation-delay: 0.66s; }
+
+.page-hero .eyebrow,
+.page-hero h1,
+.page-hero p {
+  animation: fadeUpIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.page-hero .eyebrow { animation-delay: 0.05s; }
+.page-hero h1 { animation-delay: 0.18s; }
+.page-hero p { animation-delay: 0.32s; }
+
+.ehero-pd-col > *,
+.ehero-wd-panel > *,
+.ehero-corp-panel > *,
+.ehero-about-text > *,
+.ehero-contact-inner > * {
+  animation: fadeUpIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.ehero-pd-col > *:nth-child(1) { animation-delay: 0.08s; }
+.ehero-pd-col > *:nth-child(2) { animation-delay: 0.2s; }
+.ehero-pd-col > *:nth-child(3) { animation-delay: 0.34s; }
+.ehero-pd-col > *:nth-child(4) { animation-delay: 0.44s; }
+.ehero-pd-col > *:nth-child(5) { animation-delay: 0.54s; }
+.ehero-pd-footer { animation: fadeUpIn 0.8s ease both; animation-delay: 0.7s; }
+
+.ehero-wd-panel > *:nth-child(1) { animation-delay: 0.1s; }
+.ehero-wd-panel > *:nth-child(2) { animation-delay: 0.24s; }
+.ehero-wd-panel > *:nth-child(3) { animation-delay: 0.38s; }
+.ehero-wd-panel > *:nth-child(4) { animation-delay: 0.48s; }
+.ehero-wd-panel > *:nth-child(5) { animation-delay: 0.58s; }
+
+.ehero-corp-panel > *:nth-child(1) { animation-delay: 0.08s; }
+.ehero-corp-panel > *:nth-child(2) { animation-delay: 0.2s; }
+.ehero-corp-panel > *:nth-child(3) { animation-delay: 0.32s; }
+.ehero-corp-panel > *:nth-child(4) { animation-delay: 0.44s; }
+.ehero-corp-panel > *:nth-child(5) { animation-delay: 0.56s; }
+.ehero-corp-panel > *:nth-child(6) { animation-delay: 0.66s; }
+
+.ehero-about-text > *:nth-child(1) { animation-delay: 0.1s; }
+.ehero-about-text > *:nth-child(2) { animation-delay: 0.24s; }
+.ehero-about-text > *:nth-child(3) { animation-delay: 0.38s; }
+
+.ehero-contact-inner > *:nth-child(1) { animation-delay: 0.08s; }
+.ehero-contact-inner > *:nth-child(2) { animation-delay: 0.22s; }
+.ehero-contact-inner > *:nth-child(3) { animation-delay: 0.36s; }
+.ehero-contact-inner > *:nth-child(4) { animation-delay: 0.48s; }
+
+.site-header {
+  animation: fadeUpIn 0.7s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow, .hero h1, .hero-sub, .hero-ctas,
+  .page-hero .eyebrow, .page-hero h1, .page-hero p, .site-header,
+  .ehero-pd-col > *, .ehero-pd-footer, .ehero-wd-panel > *, .ehero-corp-panel > *,
+  .ehero-about-text > *, .ehero-contact-inner > * {
+    animation: none;
+  }
+}
+
+/* ---------- Skeleton loading ---------- */
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.plate.loading,
+.image-frame.loading {
+  background: linear-gradient(90deg, var(--panel) 0%, var(--panel-2) 50%, var(--panel) 100%);
+  background-size: 800px 100%;
+  animation: shimmer 1.3s infinite linear;
+}
+
+.plate img,
+.image-frame img {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.plate img.loaded,
+.image-frame img.loaded {
+  opacity: 1;
+}
+
+.hero {
+  background-color: var(--panel);
+}
+.hero.bg-loading {
+  background-image: none !important;
+  background: linear-gradient(90deg, var(--panel) 0%, var(--panel-2) 50%, var(--panel) 100%);
+  background-size: 800px 100%;
+  animation: shimmer 1.3s infinite linear;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(14, 12, 10, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-inner {
+  max-width: min(900px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.96);
+  transition: transform 0.3s ease;
+}
+.lightbox.open .lightbox-inner {
+  transform: scale(1);
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 1001;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(245,239,226,0.3);
+  background: rgba(14,12,10,0.5);
+  color: var(--on-accent);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.lightbox-close:hover {
+  background: rgba(184, 80, 46, 0.85);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 640px) {
+  .lightbox { padding: 20px; }
+  .lightbox-close { top: 16px; right: 16px; width: 40px; height: 40px; font-size: 22px; }
+}
+
+/* ---------- Utility ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+.pillars-grid .pillar-card:nth-child(1) { transition-delay: 0s; }
+.pillars-grid .pillar-card:nth-child(2) { transition-delay: 0.1s; }
+.pillars-grid .pillar-card:nth-child(3) { transition-delay: 0.2s; }
+
+.gallery-item:nth-child(1) { transition-delay: 0s; }
+.gallery-item:nth-child(2) { transition-delay: 0.06s; }
+.gallery-item:nth-child(3) { transition-delay: 0.12s; }
+.gallery-item:nth-child(4) { transition-delay: 0.18s; }
+.gallery-item:nth-child(5) { transition-delay: 0.24s; }
+.gallery-item:nth-child(6) { transition-delay: 0.3s; }
+.gallery-item:nth-child(7) { transition-delay: 0.36s; }
+
+.text-center { text-align: center; }
+.mt-40 { margin-top: 40px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="splash" id="splash">
+  <img src="images/logo-transparent.png" alt="La Grande Maison Atelier" class="splash-logo">
+  <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="#home" class="brand">
+      <img src="images/logo.jpg" alt="La Grande Maison Atelier">
+    </a>
+    <nav class="nav-links">
+      <a href="#home" data-page="home">Home</a>
+      <a href="#private-dining" data-page="private-dining">Private Dining</a>
+      <a href="#weddings" data-page="weddings">Weddings</a>
+      <a href="#corporate" data-page="corporate">Corporate</a>
+      <a href="#about" data-page="about">About</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="page active" id="page-home" data-page="home">
+
+<section class="hero" style="background-image: url('images/Hero-BG.png');">
+  <div class="scroll-cue"></div>
+</section>
+
+<section class="pillars">
+  <div class="container">
+    <div class="eyebrow text-center" style="display:block;">What We Offer</div>
+    <h2 class="section-title text-center" style="margin:0 auto;">Three ways to gather</h2>
+
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <a href="#private-dining" class="plate ring-teal">
+          <img src="images/Dish9.jpg" alt="Private dining tasting plate">
+        </a>
+        <h3>Private Dining &amp; Events</h3>
+        <p>Personalised menus, curated drinks pairings and bespoke tableware — tailored to your home, your guests, your evening.</p>
+        <a href="#private-dining" class="link">Discover Private Dining</a>
+      </div>
+
+      <div class="pillar-card reveal">
+        <a href="#weddings" class="plate ring-rust">
+          <img src="images/Dish6.jpg" alt="Wedding dining plate">
+        </a>
+        <h3>Weddings</h3>
+        <p>From an intimate elopement to a lavish celebration, a bespoke menu built entirely around your story and your day.</p>
+        <a href="#weddings" class="link">Discover Weddings</a>
+      </div>
+
+      <div class="pillar-card reveal">
+        <a href="#corporate" class="plate ring-teal">
+          <img src="images/Dishes.jpg" alt="Corporate catering spread">
+        </a>
+        <h3>Corporate Dining</h3>
+        <p>Reliable, premium catering for executive lunches, conferences and brand events — from snack trays to full service.</p>
+        <a href="#corporate" class="link">Discover Corporate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-band">
+  <div class="container">
+    <div class="gallery-band-head reveal">
+      <div class="eyebrow">From the Pass</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">A recent tasting</h2>
+    </div>
+  </div>
+  <div class="gallery-viewport">
+  <div class="gallery-track container">
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/dish_octopus.jpg" data-caption="Grilled octopus">
+  <img src="images/dish_octopus.jpg" alt="Grilled octopus" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/dish_carpaccio_red.jpg" data-caption="Fish carpaccio">
+  <img src="images/dish_carpaccio_red.jpg" alt="Fish carpaccio" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/Dish3.jpg" data-caption="Scallop citrus carpaccio">
+  <img src="images/Dish3.jpg" alt="Scallop citrus carpaccio" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/dish_seafood.jpg" data-caption="Seafood bouillabaisse">
+  <img src="images/dish_seafood.jpg" alt="Seafood bouillabaisse" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/Dish4.jpg" data-caption="Stuffed crab">
+  <img src="images/Dish4.jpg" alt="Stuffed crab" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/dish_creme.jpg" data-caption="Passion fruit dessert">
+  <img src="images/dish_creme.jpg" alt="Passion fruit dessert" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate lightbox-trigger" data-src="images/dish_coconut_cocktail.jpg" data-caption="Coconut cocktail">
+  <img src="images/dish_coconut_cocktail.jpg" alt="Coconut cocktail" loading="lazy">
+</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-mark reveal">&ldquo;</div>
+    <blockquote class="reveal">We combine creative energy with classic cooking techniques and a sense of creole inspiration — treating you in the comfort of your own home.</blockquote>
+    <div class="quote-cite reveal">Christelle Verheyden, Founder &amp; Private Chef</div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="eyebrow">Dietary Care</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Every table, considered</h2>
+      <p class="section-lede">We happily cater for all dietary requirements — gluten-free, vegan, pescatarian and more are part of our everyday menu, never an afterthought.</p>
+      <a href="#contact" class="btn btn-rust mt-40">Start a Conversation</a>
+    </div>
+    <div class="image-frame reveal">
+      <img src="images/dish_veggies_fresh.jpg" alt="Fresh vegetable platter with dips">
+    </div>
+  </div>
+</section>
+
+</section>
+
+<section class="page" id="page-private-dining" data-page="private-dining">
+
+<section class="ehero-pd">
+  <div class="ehero-pd-media">
+    <img src="images/Dish9.jpg" alt="Private dining tasting plate" class="ehero-ken-burns">
+  </div>
+  <div class="ehero-pd-scrim"></div>
+  <div class="ehero-pd-content">
+    <div class="ehero-pd-col">
+      <div class="ehero-eyebrow">Private Dining &amp; Events</div>
+      <h1 class="ehero-heading">An evening,<br><em>designed around you.</em></h1>
+      <div class="ehero-rule"></div>
+      <p class="ehero-sub">Using subtle textures and the freshest local ingredients, we design menus that elevate the everyday into something memorable — in the comfort of your own home.</p>
+      <a href="#enquiry-private-dining" class="ehero-cta">Explore Private Dining <span class="arrow">→</span></a>
+    </div>
+    <div class="ehero-pd-footer">
+      <span class="ehero-pd-tag">Seychelles &middot; Private Dining</span>
+      <span class="ehero-pd-index">01 / 05</span>
+    </div>
+  </div>
+  <div class="scroll-cue"></div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="image-frame reveal">
+      <img src="images/Dish9.jpg" alt="Fine dining tartare plate">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Personalised Menus</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">A menu built just for your evening</h2>
+      <p class="section-lede">Fill out a short questionnaire and let Chef Christelle and her team take care of everything — from a relaxed family dinner to a full tasting experience.</p>
+      <ul class="feature-list">
+        <li><span class="mark">&mdash;</span><span>We happily cater for <strong>all dietary requirements</strong>: gluten-free, vegan, pescatarian and more, as standard.</span></li>
+        <li><span class="mark">&mdash;</span><span>Just let us know of any <strong>dietary restrictions or preferences</strong> and our chef will ensure they're catered for.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="eyebrow">Drinks Packages</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">From welcome drinks to bespoke cocktails</h2>
+      <p class="section-lede">Our sommelier will happily propose a pairing to perfectly match your menu and budget — from a welcome drink to a full wine pairing across courses.</p>
+    </div>
+    <div class="image-frame reveal">
+      <img src="images/dish_coconut_cocktail.jpg" alt="Coconut welcome cocktail">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="image-frame reveal">
+      <img src="images/dish_veggies_fresh.jpg" alt="Bespoke tableware and fresh produce">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Bespoke Tableware</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Every setting, considered</h2>
+      <p class="section-lede">We can help design and decorate a beautiful dinner setting to match your colour scheme, interior, or style preference — down to the last detail.</p>
+      <a href="#enquiry-private-dining" class="btn btn-rust mt-40">Enquire Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-band">
+  <div class="container">
+    <div class="gallery-band-head reveal">
+      <div class="eyebrow">A Taste of What's Possible</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Recent private dinners</h2>
+    </div>
+  </div>
+  <div class="gallery-viewport">
+  <div class="gallery-track container">
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/Dish6.jpg" data-caption="Seared tuna with vegetables">
+  <img src="images/Dish6.jpg" alt="Seared tuna with vegetables" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/dish_carpaccio_red.jpg" data-caption="Fish carpaccio with edible flowers">
+  <img src="images/dish_carpaccio_red.jpg" alt="Fish carpaccio with edible flowers" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/Dish3.jpg" data-caption="Scallop citrus carpaccio">
+  <img src="images/Dish3.jpg" alt="Scallop citrus carpaccio" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/dish_creme.jpg" data-caption="Passion fruit dessert">
+  <img src="images/dish_creme.jpg" alt="Passion fruit dessert" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/Dish7.jpg" data-caption="Roasted vegetable platter">
+  <img src="images/Dish7.jpg" alt="Roasted vegetable platter" loading="lazy">
+</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="enquiry-private-dining">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:56px;">
+      <div class="eyebrow">Let's Plan Your Evening</div>
+      <h2 class="section-title" style="margin:0 auto;">Tell us about your event</h2>
+      <p class="section-lede" style="margin:0 auto;">Take a few minutes to share what you have in mind, and we'll come back to you with a first idea of what we can offer.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <form id="private-events-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="ev-name">Full Name</label>
+            <input type="text" id="ev-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="ev-contact">Email or Phone</label>
+            <input type="text" id="ev-contact" name="contact" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="ev-date">Event Date</label>
+            <input type="date" id="ev-date" name="date">
+          </div>
+          <div class="field">
+            <label for="ev-guests">Number of Guests</label>
+            <input type="number" id="ev-guests" name="guests" min="1">
+          </div>
+        </div>
+        <div class="field">
+          <label for="ev-location">Location</label>
+          <input type="text" id="ev-location" name="location" placeholder="Where will the event take place?">
+        </div>
+        <div class="field">
+          <label for="ev-style">What did you have in mind?</label>
+          <select id="ev-style" name="style">
+            <option value="">Select an option</option>
+            <option>Cocktail</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            <option>Picnic</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ev-dietary">Dietary Requirements or Intolerances</label>
+          <input type="text" id="ev-dietary" name="dietary">
+        </div>
+        <div class="field">
+          <label for="ev-drinks">Would you like us to take care of drinks / wine pairing?</label>
+          <select id="ev-drinks" name="drinks">
+            <option value="">Select an option</option>
+            <option>Yes, please</option>
+            <option>No, thank you</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ev-notes">Anything else we should know?</label>
+          <textarea id="ev-notes" name="notes" placeholder="Cuisine preferences, dessert style, special requests..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Enquiry</button>
+        <p class="form-note">We'll get back to you with a first idea of what we can provide.</p>
+      </form>
+      <div class="form-success">
+        <h3>Thank you</h3>
+        <p>Your email app should have opened with your enquiry ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly.</p>
+        <div class="form-success-actions">
+          <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
+          <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
+        </div>
+        <pre class="form-success-message"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<section class="page" id="page-weddings" data-page="weddings">
+
+<section class="ehero-wd">
+  <div class="ehero-wd-panel">
+    <div class="ehero-eyebrow">Weddings</div>
+    <h1 class="ehero-heading">A celebration<br><em>made entirely yours.</em></h1>
+    <div class="ehero-rule"></div>
+    <p class="ehero-sub">From small, intimate elopements to lavish, opulent celebrations — a bespoke menu built entirely around your vision, your story, and your guests.</p>
+    <a href="#enquiry-weddings" class="ehero-link">Discover Weddings <span class="arrow">→</span></a>
+  </div>
+  <div class="ehero-wd-media">
+    <img src="images/Dish3.jpg" alt="Scallop citrus wedding course" class="ehero-ken-burns">
+  </div>
+  <div class="ehero-wd-seam"></div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="image-frame reveal">
+      <img src="images/Dish3.jpg" alt="Scallop citrus wedding course">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">A Day, Told Through Food</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Your story, on every plate</h2>
+      <p class="section-lede">Do you have a favourite local ingredient we should include — fresh lobster, palm heart, line-caught fish? Or something from your travels, your country, your own story? We build the menu around what matters to you.</p>
+      <ul class="feature-list">
+        <li><span class="mark">&mdash;</span><span>A welcome cocktail, followed by a walking dinner, or a seated 3&ndash;4 course menu, or a full buffet &mdash; whatever suits your day.</span></li>
+        <li><span class="mark">&mdash;</span><span>A dedicated <strong>wedding cake</strong>, a selection of mini desserts, or something fruit-forward &mdash; entirely your call.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="eyebrow">Full Event Management</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Every detail, taken care of</h2>
+      <p class="section-lede">We can help with location recommendations, menu creation, wine pairing, service and tableware — a complete event management service so nothing is left to chance on your day.</p>
+    </div>
+    <div class="image-frame reveal">
+      <img src="images/dish_octopus.jpg" alt="Grilled octopus wedding course">
+    </div>
+  </div>
+</section>
+
+<section class="gallery-band">
+  <div class="container">
+    <div class="gallery-band-head reveal">
+      <div class="eyebrow">Recently Celebrated</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">A glimpse of the table</h2>
+    </div>
+  </div>
+  <div class="gallery-viewport">
+  <div class="gallery-track container">
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/Dish4.jpg" data-caption="Stuffed crab starter">
+  <img src="images/Dish4.jpg" alt="Stuffed crab starter" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/dish_seafood.jpg" data-caption="Seafood bouillabaisse">
+  <img src="images/dish_seafood.jpg" alt="Seafood bouillabaisse" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/Dish5.jpg" data-caption="Fish with crispy leek">
+  <img src="images/Dish5.jpg" alt="Fish with crispy leek" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/dish_creme.jpg" data-caption="Passion fruit dessert">
+  <img src="images/dish_creme.jpg" alt="Passion fruit dessert" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/dish_coconut_cocktail.jpg" data-caption="Coconut welcome cocktail">
+  <img src="images/dish_coconut_cocktail.jpg" alt="Coconut welcome cocktail" loading="lazy">
+</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="enquiry-weddings">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:56px;">
+      <div class="eyebrow">Thank You for Thinking of Us</div>
+      <h2 class="section-title" style="margin:0 auto;">Tell us about your day</h2>
+      <p class="section-lede" style="margin:0 auto;">Let us take care of you — share a few details below and we'll follow up with a first idea of your menu.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <form id="wedding-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="wd-name">Full Name</label>
+            <input type="text" id="wd-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="wd-contact">Email or Phone</label>
+            <input type="text" id="wd-contact" name="contact" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="wd-date">Wedding Date</label>
+            <input type="date" id="wd-date" name="date">
+          </div>
+          <div class="field">
+            <label for="wd-guests">Number of Guests</label>
+            <input type="number" id="wd-guests" name="guests" min="1">
+          </div>
+        </div>
+        <div class="field">
+          <label for="wd-location">Location</label>
+          <input type="text" id="wd-location" name="location" placeholder="Venue or island, if decided">
+        </div>
+        <div class="field">
+          <label for="wd-style">What did you have in mind?</label>
+          <select id="wd-style" name="style">
+            <option value="">Select an option</option>
+            <option>Cocktail to start, then walking dinner</option>
+            <option>Seated 3–4 course dinner</option>
+            <option>Buffet</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="wd-ingredient">A favourite ingredient or story we should include?</label>
+          <input type="text" id="wd-ingredient" name="favourite_ingredient" placeholder="Local, or personal to your story">
+        </div>
+        <div class="field">
+          <label for="wd-dessert">Dessert preference</label>
+          <select id="wd-dessert" name="dessert">
+            <option value="">Select an option</option>
+            <option>Traditional wedding cake</option>
+            <option>Fruit-forward</option>
+            <option>Chocolate</option>
+            <option>Selection of mini desserts</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="wd-dietary">Dietary Requirements or Intolerances</label>
+          <input type="text" id="wd-dietary" name="dietary">
+        </div>
+        <div class="field">
+          <label for="wd-notes">Anything else we should know?</label>
+          <textarea id="wd-notes" name="notes" placeholder="Wine preferences, special requests, anything on your mind"></textarea>
+        </div>
+        <button type="submit" class="btn btn-rust">Send Enquiry</button>
+        <p class="form-note">This is your day — we'll make sure it's all about you.</p>
+      </form>
+      <div class="form-success">
+        <h3>Thank you</h3>
+        <p>Your email app should have opened with your enquiry ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly. We can't wait to be part of your day.</p>
+        <div class="form-success-actions">
+          <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
+          <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
+        </div>
+        <pre class="form-success-message"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<section class="page" id="page-corporate" data-page="corporate">
+
+<section class="ehero-corp">
+  <div class="ehero-corp-media">
+    <img src="images/Dishes.jpg" alt="Corporate catering spread" class="ehero-ken-burns">
+  </div>
+  <div class="ehero-corp-panel">
+    <div class="ehero-corp-index"><span>02</span> &mdash; Corporate</div>
+    <div class="ehero-eyebrow">Corporate Dining</div>
+    <h1 class="ehero-heading">Exceptional food.<br>Seamlessly executed.</h1>
+    <div class="ehero-rule"></div>
+    <p class="ehero-sub">Reliable, consistent, and always premium — from executive lunches to large brand events, delivered with the same care as every La Grande Maison menu.</p>
+    <a href="#enquiry-corporate" class="ehero-cta">Discover Corporate Dining <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="image-frame reveal">
+      <img src="images/Dishes.jpg" alt="Corporate catering spread">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Built Around Your Event</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">From snack trays to full service</h2>
+      <p class="section-lede">Whether you need a complete service delivering to your request, or simple snack tray delivery, we're there for you at every scale.</p>
+      <ul class="feature-list">
+        <li><span class="mark">&mdash;</span><span>Executive lunches, large brand events, or daytime conferences &mdash; one team, consistent quality.</span></li>
+        <li><span class="mark">&mdash;</span><span>Sourced with the same freshest local ingredients used across every La Grande Maison menu.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="eyebrow">Every Requirement, Covered</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Dietary care as standard</h2>
+      <p class="section-lede">Vegan, gluten-free, pescatarian and more &mdash; just let us know your team's requirements ahead of time and we'll take care of the rest, no separate request needed.</p>
+    </div>
+    <div class="image-frame reveal">
+      <img src="images/dish_veggies_fresh.jpg" alt="Fresh vegetable platter for corporate event">
+    </div>
+  </div>
+</section>
+
+<section class="gallery-band">
+  <div class="container">
+    <div class="gallery-band-head reveal">
+      <div class="eyebrow">Recently Served</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">From the boardroom to the buffet</h2>
+    </div>
+  </div>
+  <div class="gallery-viewport">
+  <div class="gallery-track container">
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/Dish2.jpg" data-caption="Caesar salad plate">
+  <img src="images/Dish2.jpg" alt="Caesar salad plate" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/Dish7.jpg" data-caption="Roasted vegetable platter">
+  <img src="images/Dish7.jpg" alt="Roasted vegetable platter" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/Dishes.jpg" data-caption="Full breakfast and lunch spread">
+  <img src="images/Dishes.jpg" alt="Full breakfast and lunch spread" loading="lazy">
+</button>
+    </div>
+    <div class="gallery-item reveal">
+      <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/dish_veggies_fresh.jpg" data-caption="Fresh crudités platter">
+  <img src="images/dish_veggies_fresh.jpg" alt="Fresh crudités platter" loading="lazy">
+</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="enquiry-corporate">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:56px;">
+      <div class="eyebrow">Let's Talk</div>
+      <h2 class="section-title" style="margin:0 auto;">Tell us about your event</h2>
+      <p class="section-lede" style="margin:0 auto;">Take a few minutes to share what you need, and we'll come back to you with a first idea of what we can provide.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <form id="corporate-events-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="co-name">Full Name / Company</label>
+            <input type="text" id="co-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="co-contact">Email or Phone</label>
+            <input type="text" id="co-contact" name="contact" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="co-date">Event Date</label>
+            <input type="date" id="co-date" name="date">
+          </div>
+          <div class="field">
+            <label for="co-guests">Number of Guests</label>
+            <input type="number" id="co-guests" name="guests" min="1">
+          </div>
+        </div>
+        <div class="field">
+          <label for="co-location">Location</label>
+          <input type="text" id="co-location" name="location" placeholder="Office, venue, or island">
+        </div>
+        <div class="field">
+          <label for="co-style">What did you have in mind?</label>
+          <select id="co-style" name="style">
+            <option value="">Select an option</option>
+            <option>Snack trays / drop-off</option>
+            <option>Executive lunch</option>
+            <option>Full seated service</option>
+            <option>Conference catering</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="co-dietary">Dietary Requirements or Intolerances</label>
+          <input type="text" id="co-dietary" name="dietary">
+        </div>
+        <div class="field">
+          <label for="co-notes">Anything else we should know?</label>
+          <textarea id="co-notes" name="notes" placeholder="Timing, budget, or special requests"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Enquiry</button>
+        <p class="form-note">We'll get back to you with a first idea of what we can provide.</p>
+      </form>
+      <div class="form-success">
+        <h3>Thank you</h3>
+        <p>Your email app should have opened with your enquiry ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly.</p>
+        <div class="form-success-actions">
+          <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
+          <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
+        </div>
+        <pre class="form-success-message"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<section class="page" id="page-about" data-page="about">
+
+<section class="ehero-about">
+  <div class="container ehero-about-grid">
+    <div class="ehero-about-text reveal">
+      <div class="ehero-eyebrow">About La Grande Maison</div>
+      <h1 class="ehero-about-heading">Food is more than<br>what is on the plate.</h1>
+      <p class="ehero-about-lede">Chef Christelle Verheyden and her team draw on the freshest Seychelles ingredients and classic technique, treating every guest to memories made in the comfort of their own home.</p>
+    </div>
+    <div class="ehero-about-media reveal">
+      <div class="ehero-about-photo-main">
+        <img src="images/Dish6.jpg" alt="Chef Christelle Verheyden's signature seared tuna plate" class="ehero-ken-burns">
+      </div>
+      <div class="ehero-about-photo-accent">
+        <img src="images/Dish1.jpg" alt="Delicately plated fish dish">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="image-frame reveal">
+      <img src="images/Dish4.jpg" alt="Chef Christelle Verheyden's stuffed crab">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Chef Christelle Verheyden</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">A creole-inspired philosophy</h2>
+      <p class="section-lede">Everything we do at La Grande Maison Atelier — using subtle textures and flavours, sourcing the freshest products — has the same goal: to enhance and elevate local ingredients. Seychelles are a constant source of creativity from which we draw.</p>
+      <p class="section-lede" style="margin-top:20px;">We combine this creative energy with classic cooking techniques and a sense of creole inspiration, so every guest discovers a new approach to the Creole taste — treated in the comfort of their own home.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:60px;">
+      <div class="eyebrow">What Guides Us</div>
+      <h2 class="section-title" style="margin:0 auto;">Quality. Creativity. Experience. Confidentiality.</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/dish_octopus.jpg" data-caption="Grilled octopus dish">
+  <img src="images/dish_octopus.jpg" alt="Grilled octopus dish" loading="lazy">
+</button>
+        <h3>Quality</h3>
+        <p>The freshest Seychelles ingredients, sourced with care for every menu we design.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <button type="button" class="plate ring-rust lightbox-trigger" data-src="images/Dish1.jpg" data-caption="Delicately plated fish dish">
+  <img src="images/Dish1.jpg" alt="Delicately plated fish dish" loading="lazy">
+</button>
+        <h3>Creativity</h3>
+        <p>Classic technique meets creole inspiration in every plate that leaves our kitchen.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <button type="button" class="plate ring-teal lightbox-trigger" data-src="images/dish_seafood.jpg" data-caption="Seafood bouillabaisse">
+  <img src="images/dish_seafood.jpg" alt="Seafood bouillabaisse" loading="lazy">
+</button>
+        <h3>Experience</h3>
+        <p>From intimate dinners to full event management — we've done it all, with care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-mark reveal">&ldquo;</div>
+    <blockquote class="reveal">Let us take care of you, relax, and discover a new approach to the Creole taste — treat yourself in the comfort of your own home.</blockquote>
+    <div class="quote-cite reveal">Christelle Verheyden, Founder &amp; Private Chef</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container text-center reveal">
+    <div class="eyebrow">Ready When You Are</div>
+    <h2 class="section-title" style="margin:0 auto;">Let's plan something memorable</h2>
+    <p class="section-lede" style="margin:0 auto 32px;">Whichever kind of gathering you're planning, we'd love to hear from you.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a href="#private-dining" class="btn btn-outline">Explore Private Dining</a>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<section class="page" id="page-contact" data-page="contact">
+
+<section class="ehero-contact">
+  <div class="container ehero-contact-inner">
+    <div class="ehero-eyebrow">Get in Touch</div>
+    <h1 class="ehero-contact-heading">Let's create<br><em>something memorable.</em></h1>
+    <p class="ehero-sub-light">Have a special query, or not sure which service fits your event? Reach out and we'll be happy to help.</p>
+    <div class="ehero-contact-tags">Private Dining &middot; Weddings &middot; Corporate</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="eyebrow">Reach Us Directly</div>
+      <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Say hello</h2>
+      <ul class="feature-list">
+        <li><span class="mark">&mdash;</span><span><strong>Email</strong><br><a href="mailto:hello@lagrandemaisonseychelles.sc">hello@lagrandemaisonseychelles.sc</a></span></li>
+        <li><span class="mark">&mdash;</span><span><strong>Service Area</strong><br>Mah&eacute;, Praslin &amp; La Digue, Seychelles</span></li>
+        <li><span class="mark">&mdash;</span><span><strong>Tableware Rentals</strong><br>Looking for rentals rather than catering? Visit our <a href="#" style="text-decoration:underline;">La Grande Maison Rentals</a> site.</span></li>
+      </ul>
+    </div>
+    <div class="image-frame reveal">
+      <img src="images/Dish4.jpg" alt="Stuffed crab dish">
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="enquiry-contact">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:56px;">
+      <div class="eyebrow">General Enquiry</div>
+      <h2 class="section-title" style="margin:0 auto;">Send us a message</h2>
+      <p class="section-lede" style="margin:0 auto;">For private dining, wedding or corporate enquiries, you can also use the dedicated forms on each service page for a faster response.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="ct-name">Full Name</label>
+            <input type="text" id="ct-name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="ct-contact">Email or Phone</label>
+            <input type="text" id="ct-contact" name="contact" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ct-interest">I'm interested in</label>
+          <select id="ct-interest" name="interest">
+            <option value="">Select an option</option>
+            <option>Private Dining &amp; Events</option>
+            <option>Weddings</option>
+            <option>Corporate Dining</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ct-message">Message</label>
+          <textarea id="ct-message" name="message" placeholder="Tell us a little about what you're planning" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">We aim to respond within 1–2 business days.</p>
+      </form>
+      <div class="form-success">
+        <h3>Thank you</h3>
+        <p>Your email app should have opened with your message ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly.</p>
+        <div class="form-success-actions">
+          <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
+          <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
+        </div>
+        <pre class="form-success-message"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <img src="images/logo.jpg" alt="La Grande Maison Atelier">
+        </a>
+        <p>Private chef and catering services across Mah&eacute;, Praslin and La Digue. Quality, creativity, experience and confidentiality in every event.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#private-dining">Private Dining</a></li>
+          <li><a href="#weddings">Weddings</a></li>
+          <li><a href="#corporate">Corporate Dining</a></li>
+          <li><a href="#about">About Christelle</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="#contact">Contact &amp; Enquiries</a></li>
+          <li><a href="mailto:hello@lagrandemaisonseychelles.sc">hello@lagrandemaisonseychelles.sc</a></li>
+          <li><a href="#">Seychelles</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 La Grande Maison Atelier. All rights reserved.</span>
+      <span>Private Chef &amp; Catering — Seychelles</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <div class="lightbox-inner">
+    <img alt="" class="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7">
+  </div>
+</div>
+
+<script>
+// ============ Splash / loading screen ============
+(function () {
+  const splash = document.getElementById('splash');
+  if (!splash) return;
+  document.body.style.overflow = 'hidden';
+  const minDisplay = 900;
+  const start = performance.now();
+
+  function hideSplash() {
+    const elapsed = performance.now() - start;
+    const wait = Math.max(0, minDisplay - elapsed);
+    setTimeout(() => {
+      splash.classList.add('hide');
+      document.body.style.overflow = '';
+      setTimeout(() => splash.remove(), 650);
+    }, wait);
+  }
+
+  if (document.readyState === 'complete') {
+    hideSplash();
+  } else {
+    window.addEventListener('load', hideSplash);
+  }
+})();
+
+// ============ Header scroll state ============
+const header = document.querySelector('.site-header');
+function onScroll() {
+  if (window.scrollY > 40) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+}
+window.addEventListener('scroll', onScroll);
+onScroll();
+
+// ============ Mobile nav toggle ============
+const toggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    toggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.textContent = '☰';
+    });
+  });
+}
+
+// ============ Gallery deck: continuous auto-scroll marquee ============
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const galleryMeasureFns = [];
+function remeasureGalleries() {
+  galleryMeasureFns.forEach(fn => fn());
+}
+
+document.querySelectorAll('.gallery-viewport').forEach(viewport => {
+  const track = viewport.querySelector('.gallery-track');
+  if (!track) return;
+
+  // Duplicate the set once so the strip can loop seamlessly
+  const originalItems = Array.from(track.children).filter(el => el.classList.contains('gallery-item'));
+  originalItems.forEach(item => {
+    const clone = item.cloneNode(true);
+    clone.classList.remove('reveal', 'in');
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('tabindex', '-1');
+    track.appendChild(clone);
+  });
+
+  let loopWidth = 0;
+  function measure() {
+    const firstClone = track.children[originalItems.length];
+    if (!firstClone) { loopWidth = track.scrollWidth / 2; return; }
+    const trackRect = track.getBoundingClientRect();
+    const cloneRect = firstClone.getBoundingClientRect();
+    loopWidth = (cloneRect.left - trackRect.left) + track.scrollLeft;
+  }
+  measure();
+  window.addEventListener('load', measure);
+  setTimeout(measure, 600); // re-measure once images/fonts settle
+  galleryMeasureFns.push(measure);
+
+  if (reduceMotion) return; // respect reduced-motion preference: static, drag-only strip
+
+  const SPEED = 34; // px per second, gentle ambient pace
+  let paused = false;
+  let lastTime = null;
+
+  function tick(now) {
+    if (lastTime === null) lastTime = now;
+    const dt = Math.min((now - lastTime) / 1000, 0.05);
+    lastTime = now;
+    if (!paused && loopWidth > 0) {
+      track.scrollLeft += SPEED * dt;
+      if (track.scrollLeft >= loopWidth) {
+        track.scrollLeft -= loopWidth;
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // Pause while the pointer rests over the strip, so captions are easy to read
+  viewport.addEventListener('mouseenter', () => { paused = true; });
+  viewport.addEventListener('mouseleave', () => { paused = false; });
+
+  // Optional manual override: drag to browse, auto-scroll resumes after release
+  let isDown = false;
+  let dragged = false;
+  let startX = 0;
+  let startScroll = 0;
+
+  function onPointerMove(e) {
+    if (!isDown) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) dragged = true;
+    track.scrollLeft = startScroll - dx;
+  }
+
+  function endDrag() {
+    if (!isDown) return;
+    isDown = false;
+    track.classList.remove('dragging');
+    paused = false;
+    window.removeEventListener('pointermove', onPointerMove);
+    window.removeEventListener('pointerup', endDrag);
+  }
+
+  track.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'mouse') return; // let touch devices use native momentum scroll
+    if (e.button !== undefined && e.button !== 0) return;
+    isDown = true;
+    dragged = false;
+    paused = true;
+    startX = e.clientX;
+    startScroll = track.scrollLeft;
+    track.classList.add('dragging');
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', endDrag);
+  });
+
+  // Prevent the lightbox from opening right after a drag gesture
+  track.addEventListener('click', (e) => {
+    if (dragged) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }, true);
+});
+
+// ============ Single-page router ============
+const PAGE_IDS = ['home', 'private-dining', 'weddings', 'corporate', 'about', 'contact'];
+const PAGE_TITLES = {
+  'home': 'La Grande Maison — Catering & Private Chef | Seychelles',
+  'private-dining': 'Private Dining & Events | La Grande Maison',
+  'weddings': 'Weddings | La Grande Maison',
+  'corporate': 'Corporate Dining | La Grande Maison',
+  'about': 'About | La Grande Maison',
+  'contact': 'Contact | La Grande Maison'
+};
+
+function currentPageId() {
+  const active = document.querySelector('.page.active');
+  return active ? active.dataset.page : 'home';
+}
+
+function renderRoute() {
+  const raw = location.hash.replace('#', '');
+  const isPageHash = PAGE_IDS.includes(raw);
+  const id = isPageHash ? raw : currentPageId();
+
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.dataset.page === id));
+  document.querySelectorAll('.nav-links a[data-page]').forEach(a => a.classList.toggle('active', a.dataset.page === id));
+  if (PAGE_TITLES[id]) document.title = PAGE_TITLES[id];
+
+  if (isPageHash) {
+    window.scrollTo(0, 0);
+    remeasureGalleries();
+  }
+}
+
+window.addEventListener('hashchange', renderRoute);
+renderRoute();
+
+// ============ Skeleton loading: dish photos ============
+document.querySelectorAll('.plate img, .image-frame img, .ehero-pd-media img, .ehero-wd-media img, .ehero-corp-media img, .ehero-about-photo-main img, .ehero-about-photo-accent img').forEach(img => {
+  const container = img.closest('.plate, .image-frame');
+  if (container) container.classList.add('loading');
+
+  function reveal() {
+    img.classList.add('loaded');
+    if (container) container.classList.remove('loading');
+  }
+
+  if (img.complete && img.naturalWidth > 0) {
+    reveal();
+  } else {
+    img.addEventListener('load', reveal);
+    img.addEventListener('error', reveal);
+  }
+});
+
+// ============ Skeleton loading: hero background ============
+document.querySelectorAll('.hero, .page-hero-image').forEach(hero => {
+  const match = hero.style.backgroundImage.match(/url\(["']?([^"')]+)["']?\)/);
+  if (!match) return;
+  const src = match[1];
+
+  hero.classList.add('bg-loading');
+  const preload = new Image();
+  preload.onload = () => hero.classList.remove('bg-loading');
+  preload.onerror = () => hero.classList.remove('bg-loading');
+  preload.src = src;
+});
+
+// ============ Lightbox ============
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+  function openLightbox(src, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = caption || '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      openLightbox(trigger.dataset.src, trigger.dataset.caption);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  // Click outside the image (on the dark backdrop) closes it
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Escape key closes it
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+}
+
+// ============ Reveal on scroll ============
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => io.observe(el));
+
+// ============ Enquiry form handling ============
+// Forms attempt mailto:, but since mailto silently does nothing on many
+// phones/browsers without a configured email app, the compiled message is
+// always shown on-screen too, with a one-tap Copy button — so the enquiry
+// is never lost even if the email app never opens.
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+  // Fallback for non-secure contexts (e.g. local file://) or older browsers
+  return new Promise((resolve, reject) => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      resolve();
+    } catch (err) {
+      reject(err);
+    } finally {
+      document.body.removeChild(ta);
+    }
+  });
+}
+
+function handleEnquiryForm(formId, subjectPrefix) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const lines = [];
+    for (const [key, value] of data.entries()) {
+      if (!value) continue;
+      lines.push(`${key}: ${value}`);
+    }
+
+    const bodyText = lines.join('\n');
+    const subject = encodeURIComponent(`${subjectPrefix} — ${data.get('name') || 'New Enquiry'}`);
+    const body = encodeURIComponent(bodyText);
+
+    // Attempt to open mail client with prefilled enquiry
+    window.location.href = `mailto:hello@lagrandemaisonseychelles.sc?subject=${subject}&body=${body}`;
+
+    // Always show the compiled message on-screen as a reliable fallback,
+    // regardless of whether the mail client actually opened
+    const successEl = form.parentElement.querySelector('.form-success');
+    const messageEl = successEl ? successEl.querySelector('.form-success-message') : null;
+    const copyBtn = successEl ? successEl.querySelector('.copy-message-btn') : null;
+
+    if (messageEl) {
+      messageEl.textContent = bodyText;
+      messageEl.classList.add('show');
+    }
+
+    if (copyBtn) {
+      copyBtn.textContent = 'Copy Message';
+      copyBtn.classList.remove('copied');
+      copyBtn.onclick = () => {
+        copyText(bodyText).then(() => {
+          copyBtn.textContent = 'Copied ✓';
+          copyBtn.classList.add('copied');
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy Message';
+            copyBtn.classList.remove('copied');
+          }, 2500);
+        }).catch(() => {
+          copyBtn.textContent = 'Select the text above to copy';
+        });
+      };
+    }
+
+    form.style.display = 'none';
+    if (successEl) successEl.classList.add('show');
+  });
+}
+
+handleEnquiryForm('private-events-form', 'Private / Corporate Event Enquiry');
+handleEnquiryForm('corporate-events-form', 'Corporate Event Enquiry');
+handleEnquiryForm('wedding-form', 'Wedding Enquiry');
+handleEnquiryForm('contact-form', 'General Enquiry');
+
+</script>
+</body>
+</html>
