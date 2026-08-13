@@ -1702,8 +1702,9 @@ footer {
       </form>
       <div class="form-success">
         <h3>Thank you</h3>
-        <p>Your email app should have opened with your enquiry ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly.</p>
+        <p>Your email app should have opened with your enquiry ready to send. The fastest way to reach us is WhatsApp — just tap below and your message will be pre-filled.</p>
         <div class="form-success-actions">
+          <a href="#" class="btn btn-primary whatsapp-send-btn" target="_blank" rel="noopener">Message on WhatsApp</a>
           <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
           <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
         </div>
@@ -1870,8 +1871,9 @@ footer {
       </form>
       <div class="form-success">
         <h3>Thank you</h3>
-        <p>Your email app should have opened with your enquiry ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly. We can't wait to be part of your day.</p>
+        <p>Your email app should have opened with your enquiry ready to send. The fastest way to reach us is WhatsApp — just tap below and your message will be pre-filled. We can't wait to be part of your day.</p>
         <div class="form-success-actions">
+          <a href="#" class="btn btn-primary whatsapp-send-btn" target="_blank" rel="noopener">Message on WhatsApp</a>
           <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
           <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
         </div>
@@ -2020,8 +2022,9 @@ footer {
       </form>
       <div class="form-success">
         <h3>Thank you</h3>
-        <p>Your email app should have opened with your enquiry ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly.</p>
+        <p>Your email app should have opened with your enquiry ready to send. The fastest way to reach us is WhatsApp — just tap below and your message will be pre-filled.</p>
         <div class="form-success-actions">
+          <a href="#" class="btn btn-primary whatsapp-send-btn" target="_blank" rel="noopener">Message on WhatsApp</a>
           <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
           <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
         </div>
@@ -2139,6 +2142,7 @@ footer {
       <h2 class="section-title" style="font-size:clamp(28px,3.6vw,42px);">Say hello</h2>
       <ul class="feature-list">
         <li><span class="mark">&mdash;</span><span><strong>Email</strong><br><a href="mailto:hello@lagrandemaisonseychelles.sc">hello@lagrandemaisonseychelles.sc</a></span></li>
+        <li><span class="mark">&mdash;</span><span><strong>WhatsApp</strong><br><a href="https://wa.me/2482522112" target="_blank" rel="noopener">+248 2 522 112</a><br><span style="font-size:12.5px; color:var(--cream-dim);">Message only, please &mdash; we're unable to take calls.</span></span></li>
         <li><span class="mark">&mdash;</span><span><strong>Service Area</strong><br>Mah&eacute;, Praslin &amp; La Digue, Seychelles</span></li>
         <li><span class="mark">&mdash;</span><span><strong>Tableware Rentals</strong><br>Looking for rentals rather than catering? Visit our <a href="#" style="text-decoration:underline;">La Grande Maison Rentals</a> site.</span></li>
       </ul>
@@ -2188,8 +2192,9 @@ footer {
       </form>
       <div class="form-success">
         <h3>Thank you</h3>
-        <p>Your email app should have opened with your message ready to send. If nothing opened, that's alright — just copy your message below and send it to us directly.</p>
+        <p>Your email app should have opened with your message ready to send. The fastest way to reach us is WhatsApp — just tap below and your message will be pre-filled.</p>
         <div class="form-success-actions">
+          <a href="#" class="btn btn-primary whatsapp-send-btn" target="_blank" rel="noopener">Message on WhatsApp</a>
           <button type="button" class="btn btn-outline copy-message-btn">Copy Message</button>
           <a href="mailto:hello@lagrandemaisonseychelles.sc" class="btn btn-rust">Email Us Directly</a>
         </div>
@@ -2226,6 +2231,7 @@ footer {
         <ul>
           <li><a href="#contact">Contact &amp; Enquiries</a></li>
           <li><a href="mailto:hello@lagrandemaisonseychelles.sc">hello@lagrandemaisonseychelles.sc</a></li>
+          <li><a href="https://wa.me/2482522112" target="_blank" rel="noopener">WhatsApp: +248 2 522 112</a></li>
           <li><a href="#">Seychelles</a></li>
         </ul>
       </div>
@@ -2566,6 +2572,12 @@ function handleEnquiryForm(formId, subjectPrefix) {
     const successEl = form.parentElement.querySelector('.form-success');
     const messageEl = successEl ? successEl.querySelector('.form-success-message') : null;
     const copyBtn = successEl ? successEl.querySelector('.copy-message-btn') : null;
+    const whatsappBtn = successEl ? successEl.querySelector('.whatsapp-send-btn') : null;
+
+    if (whatsappBtn) {
+      const waText = encodeURIComponent(`${subjectPrefix}\n\n${bodyText}`);
+      whatsappBtn.href = `https://wa.me/2482522112?text=${waText}`;
+    }
 
     if (messageEl) {
       messageEl.textContent = bodyText;
